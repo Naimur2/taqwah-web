@@ -1,0 +1,66 @@
+@use "../../styles/" as *;
+
+.projects_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.projects_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include md {
+        width: 30%;
+    }
+    &:nth-child(2) img {
+        height: 22rem;
+    }
+}
+.projects_image {
+    max-width: 24rem;
+    min-width: 9rem;
+    transition: all 400ms ease;
+    &:hover {
+        transform: translatey(-7px);
+    }
+}
+.inner_div {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects_btn {
+    outline: none;
+    padding: 12px 42px;
+    background: #ffffff;
+    color: #4e7cf4;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: 2px solid #070038;
+
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+.projects_footer {
+    h2 {
+        margin-top: 1.5rem;
+        font-size: 1.875rem;
+        font-weight: 500;
+        color: #070038;
+        margin-left: 5rem;
+        @include lg {
+            font-size: 2.5rem;
+        }
+    }
+    img {
+        width: 9rem;
+        margin-left: 4rem;
+        @include lg {
+            width: 11rem;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use "./mixins" as mixins;
+
+$container-lg: 85%;
+$container-md: 90%;
+$container-sm:96%;
+
+.container {
+    width: $container-sm;
+    max-width: 1224px;
+    margin: 0 auto;
+    @include mixins.md {
+      width: $container-md;
+    }
+    @include mixins.xl {
+      width: $container-lg;
+    }
+  }
+  img {
+    display:block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  section {
+    padding: 2rem 0;
+    @include mixins.md {
+      padding: 4rem 0;
+    }
+    @include mixins.xxl {
+      padding: 7rem 0;
+    }
+  }

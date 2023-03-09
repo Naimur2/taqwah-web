@@ -1,0 +1,123 @@
+@use "../../styles/" as *;
+
+.client_content {
+    padding: 4rem 0;
+    @include md {
+        background: linear-gradient(to left, #ffffff 50%, transparent 50%);
+        position: relative;
+        padding: 7rem 0 0;
+        &::after {
+            content: "";
+            position: absolute;
+            border-right: 2px #070038 solid;
+            height: 100%;
+            left: 50%;
+            top: 0;
+        }
+    }
+    @include xxl {
+        margin-top: 4rem;
+    }
+}
+.client_wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.client_left_box {
+    position: relative;
+    background-color: #4e7cf4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    order: 2;
+    @include md {
+        justify-content: flex-end;
+    }
+}
+.review_polygon {
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    width: 4.25rem;
+    @include md {
+        top: 0;
+        left: 0;
+    }
+}
+.client_left_inner {
+    padding: 2.5rem 1rem;
+    color: #070038;
+    @include md {
+        width: 90%;
+        padding: 2.5rem;
+    }
+    p {
+        max-width: 60ch;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: "THICCCBOI";
+        line-height: 1.5;
+        color: #070038;
+        @include lg {
+            font-size: 1.25rem;
+        }
+    }
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #070038;
+        line-height: 35px;
+        letter-spacing: 0.016em;
+        @include lg {
+            font-size: 2.5rem;
+        }
+    }
+    h4 {
+        font-size: 1.125rem;
+        margin-top: 3rem;
+        margin-bottom: 0;
+        color: #070038;
+        @include lg {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.name p {
+    font-size: 0.785rem;
+    margin-top: 5px;
+    margin-bottom: 3rem;
+    @include lg {
+        font-size: 1rem;
+    }
+}
+.review_arrow img {
+    display: inline-block;
+    margin-right: 20px;
+}
+.client_right_box {
+    background-color: #fff;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include md {
+        order: 2;
+        background-color: transparent;
+    }
+}
+.client_right_inner {
+    width: 70%;
+}
+.client_container {
+    width: 100% #{!important};
+    @include md {
+        width: 90% #{!important};
+    }
+}

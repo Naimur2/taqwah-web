@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "rootDir": "./",
+        "paths": {
+            "@layouts/*": ["./src/layouts/*"],
+            "@images/*": ["./src/images/*"]
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@use "../../styles/" as *;
+
+.service-footer-container {
+    background-color: $primary-color;
+    padding: 3.5rem 0;
+    position: relative;
+}
+
+.service-footer-arrow {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    right: 10%;
+    top: 0;
+    @include md {
+        display: block;
+        right: 25%;
+    }
+}
+
+.service-footer {
+    @include md {
+        width: 70%;
+    }
+}
+
+.service-footer h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 150%;
+    letter-spacing: 0.016em;
+    color: #070038;
+    position: relative;
+    @include md {
+        text-align: start;
+        display: flex;
+        max-width: 11ch;
+        font-size: 3rem;
+    }
+    .first_svg {
+        display: none;
+        position: absolute;
+        left: -15%;
+        bottom: 0;
+        @include md {
+            display: block;
+        }
+    }
+    .last_svg {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: -25%;
+        @include md {
+            display: block;
+        }
+    }
+}
+
+.service-footer-bottom {
+    margin-top: 1rem;
+    text-align: center;
+    h5 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.016em;
+        color: #070038;
+        margin-bottom: 0;
+    }
+    img {
+        width: 300px;
+        margin: auto;
+    }
+    @include md {
+        margin-left: 20%;
+        text-align: center;
+    }
+}
+.service-list-item {
+    position: relative;
+    .service-svg {
+        position: absolute;
+        top: -9px;
+        left: -15px;
+    }
+}

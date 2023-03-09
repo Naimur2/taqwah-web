@@ -1,0 +1,150 @@
+@use "../../styles/" as *;
+
+.home_nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    background-color: #4e7cf4;
+    border-top: 2px solid #070038;
+    border-bottom: 2px solid #070038;
+    flex-direction: column;
+    z-index: 1000;
+    @include md {
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.logo {
+    margin: 0;
+    width: 25%;
+    text-align: end;
+    color: #070038;
+    font-size: 20px;
+    font-family: "THICCCBOI";
+    padding: 1.25rem 0;
+    padding-right: 30px;
+    margin-left: 20px;
+    font-weight: 700;
+    border-right: 2px solid #070038;
+}
+.home_nav nav {
+    display: none;
+    @include md {
+        display: flex;
+        margin: 0 auto;
+    }
+}
+.home_nav nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #070038;
+    @include md {
+        flex-direction: row;
+        background-color: #4e7cf4;
+        justify-content: center;
+    }
+}
+.home_nav nav ul li {
+    width: 100%;
+    @include md {
+        width: auto;
+    }
+}
+.home_nav nav ul li:not(:nth-child(6)) {
+    border-bottom: 3px solid #4e7cf4;
+    @include md {
+        border-bottom: none;
+    }
+}
+
+.home_nav nav ul li a {
+    display: block;
+    position: relative;
+    font-size: 1rem;
+    font-family: "Mabry Pro";
+    font-weight: 500;
+    color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    @include md {
+        display: inline;
+        color: #070038;
+        padding: 12px 16px;
+    }
+}
+.links {
+    padding: 0 0 #{!important};
+    @include md {
+        padding: 12px 0px #{!important};
+    }
+}
+.togglebar {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    cursor: pointer;
+    display: block;
+    @include md {
+        display: none;
+    }
+}
+#hidden {
+    position: absolute;
+    top: 3.7rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #070038;
+    z-index: 1;
+    display: block;
+    @include md {
+        display: none;
+    }
+}
+
+.button_stroke {
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    display: none;
+    @include md {
+        display: block;
+    }
+}
+.homeSvg {
+    transform: scaleY(1.3);
+    top: 5px;
+}
+.svg_size1 {
+    transform: scaleY(1.1);
+    top: 0px;
+}
+.svg_size2 {
+    transform: scaleY(1.1);
+    top: 2px;
+}
+.svg_size3 {
+    transform: scaleY(0.9);
+    top: -7px;
+}
+.svg_size4 {
+    transform: scaleY(1);
+    top: -5px;
+}
+.button_stroke:nth-child(1) {
+    stroke-dasharray: 650px;
+    stroke-dashoffset: -650px;
+    transition: stroke-dashoffset 800ms ease;
+}
+
+.home_nav nav ul li a:hover .button_stroke:nth-child(1) {
+    stroke-dashoffset: 0;
+}
+.active-link .button_stroke:nth-child(1) {
+    stroke-dashoffset: 0;
+}

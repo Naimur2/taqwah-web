@@ -1,0 +1,229 @@
+@use "../../styles/" as *;
+
+#header_main {
+    padding-top: 3rem;
+    position: relative;
+    @include md {
+        padding-top: 6rem;
+        background: linear-gradient(to right, #ffffff 50%, transparent 50%);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            border-right: 2px #070038 solid;
+            height: 100%;
+            left: 50%;
+            top: 0;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 2px #070038 solid;
+            width: 50%;
+            bottom: 0;
+        }
+    }
+}
+.header_container {
+    width: 100% #{!important};
+    @include md {
+        width: 90% #{!important};
+    }
+}
+.header_wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @include md {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+.header_left_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    @include md {
+        justify-content: flex-start;
+        background-color: transparent;
+    }
+}
+.left_inner {
+    text-align: center;
+    position: relative;
+    padding: 3rem 0;
+    @include md {
+        text-align: left;
+        padding: 3rem 0;
+    }
+    h1 {
+        width: 13ch;
+        margin: 0 auto;
+        color: #070038;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.4;
+        letter-spacing: 1.5%;
+        @include md {
+            margin: 0;
+        }
+        @include xl {
+            font-size: 3.5rem;
+        }
+    }
+    img {
+        position: absolute;
+        display: none;
+        @include md {
+            display: block;
+            height: 180px;
+            top: 150px;
+            left: 145px;
+        }
+        @include xl {
+            height: 200px;
+            top: 270px;
+        }
+    }
+}
+.home_btn {
+    margin-top: 2rem;
+    background-color: #4e7cf4;
+    color: white;
+    padding: 12px 80px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: 2px solid #070038;
+    transition: all 400ms ease;
+    cursor: pointer;
+    @include md {
+        padding: 12px 40px;
+    }
+}
+
+.header_right_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4e7cf4;
+}
+.right_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block_1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0px;
+    @include md {
+        justify-content: space-evenly;
+    }
+}
+
+.item_1,
+.item_3 {
+    width: 10%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem 0;
+    @include md {
+        width: 8%;
+    }
+}
+
+.item_3 {
+    padding-top: 60px;
+}
+
+.item_2 {
+    width: 50%;
+    div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    h4 {
+        color: #070038;
+        padding-right: 10px;
+        margin: 0 0 10px 10px;
+    }
+    @include md {
+        width: 40%;
+    }
+}
+
+.block_2 {
+    display: flex;
+    justify-content: space-around;
+    @include md {
+        justify-content: space-evenly;
+    }
+}
+.item_4 {
+    width: 50%;
+    div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    h4 {
+        color: #070038;
+        padding-left: 10px;
+        margin: 10px 10px 0 0;
+    }
+    @include md {
+        width: 40%;
+    }
+}
+.item_5 {
+    width: 25%;
+    @include md {
+        padding-top: 40px;
+    }
+
+    div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 25px;
+    }
+
+    h4 {
+        color: #070038;
+        transform: rotate(-90deg);
+    }
+}
+.box_2 img {
+    width: 100%;
+}
+.arrow {
+    width: auto #{!important};
+    height: 20px;
+}
+
+.block-item {
+    background: #fff;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // img {
+    //     width: 1.2rem;
+    // }
+}
+
+.h-social-block {
+    // min-height: 14rem;
+    // min-width: 18rem;
+    & img {
+        width: 100% #{!important};
+        height: 100% #{!important};
+        object-fit: cover;
+    }
+}

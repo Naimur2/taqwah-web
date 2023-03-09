@@ -1,0 +1,154 @@
+@use "../../styles/" as *;
+
+.portfolio_content {
+    padding: 4rem 0 2rem;
+    position: relative;
+    @include md {
+        padding: 6rem 0 2rem;
+    }
+    .side_arrow {
+        display: none;
+        width: 4rem;
+        @include md {
+            position: absolute;
+            left: 0;
+            top: 15%;
+            display: block;
+        }
+    }
+}
+.portfolio_header {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 20px;
+    margin-bottom: 70px;
+    @include lg {
+        gap: 5rem;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: #070038;
+        img {
+            width: 15px;
+        }
+        span {
+            font-size: 1rem;
+            display: none;
+        }
+        @include md {
+            span {
+                display: block;
+            }
+        }
+    }
+    p {
+        margin: 0;
+        position: relative;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.016em;
+        color: #070038;
+        text-align: center;
+        @include lg {
+            font-size: 1.5rem;
+        }
+        svg {
+            position: absolute;
+            right: 8%;
+            top: 70%;
+        }
+    }
+}
+
+.header_text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    h1 {
+        max-width: 15ch;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 0.016em;
+        color: #070038;
+        padding: 15px 0;
+        margin-bottom: 2rem;
+        @include lg {
+            font-size: 3.5rem;
+        }
+    }
+    .text_color {
+        font-weight: 700;
+    }
+}
+.portfolio_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.portfolio_blocks {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    @include md {
+        gap: 2rem;
+    }
+    .portfolio_image {
+        transition: all 400ms ease;
+        max-width: 25rem;
+        height: 20rem;
+        &:hover {
+            transform: translateY(-7px);
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+}
+.portfolio_blocks:not(:nth-child(2n-1)) {
+    flex-direction: column-reverse;
+    @include md {
+        flex-direction: row;
+    }
+}
+.polygon_1,
+.polygon_2,
+.polygon_3,
+.polygon_4 {
+    width: 3rem;
+    position: absolute;
+    bottom: 20%;
+    z-index: -1;
+}
+.polygon_1,
+.polygon_3 {
+    left: 0%;
+    @include md {
+        width: 7%;
+        top: 30%;
+        left: 0%;
+    }
+    @include lg {
+        left: 5%;
+    }
+}
+.polygon_2,
+.polygon_4 {
+    right: 0%;
+}
+.polygon_2,
+.polygon_3,
+.polygon_4 {
+    display: block;
+    @include md {
+        display: none;
+    }
+}

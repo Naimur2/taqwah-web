@@ -1,0 +1,54 @@
+@use "./styles/" as *;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    body {
+        font-family: "Mabry Pro", "THICCCBOI", "Russo One",
+            sans-serif #{!important};
+        background-color: $bg-color;
+    }
+
+    .shadow-lg__left {
+        border: 2px solid #000 #{!important};
+        transition: all 0.2s ease-in-out #{!important};
+        cursor: pointer;
+        transform: translateY(-0.5rem);
+        box-shadow: -0.3rem 0.3rem 0 0.1rem #000;
+        &:is(:hover, :focus) {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    }
+
+    .shadow-lg__right {
+        border: 2px solid #000 #{!important};
+        transition: all 0.2s ease-in-out #{!important};
+        cursor: pointer;
+        transform: translateY(-0.5rem);
+        box-shadow: 0.3rem 0.3rem 0 0.1rem #000;
+        &:is(:hover, :focus) {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    }
+
+    .shadow-lg-item {
+        border: 2px solid #000 #{!important};
+        box-shadow: 0.3rem 0.3rem 0 0.1rem #000 #{!important};
+    }
+}

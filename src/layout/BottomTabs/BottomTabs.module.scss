@@ -1,0 +1,29 @@
+.botomTab {
+    background-color: #070038;
+    min-height: 4.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    gap: 0.1rem;
+    grid-template-columns: repeat(5, 1fr);
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.botomTabItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    p {
+        color: #8b9eba;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}

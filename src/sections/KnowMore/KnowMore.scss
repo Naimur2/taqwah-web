@@ -1,0 +1,148 @@
+@use "../../styles/" as *;
+
+.knowmore_content {
+    padding: 4rem 0 0;
+    @include md {
+        background: linear-gradient(to right, #ffffff 50%, transparent 50%);
+        position: relative;
+        padding: 7rem 0 0;
+        &::after {
+            content: "";
+            position: absolute;
+            border-right: 2px #070038 solid;
+            height: 100%;
+            left: 50%;
+            top: 0;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 2px #070038 solid;
+            width: 50%;
+            bottom: 0;
+        }
+    }
+    @include xxl {
+        margin-top: 4rem;
+    }
+}
+.knowmore_wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.knowmore_left_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5rem 0;
+    @include md {
+        justify-content: flex-start;
+        padding: 3rem 0 10rem;
+        background-color: transparent;
+    }
+}
+.knowmore_left_inner {
+    width: 95%;
+    @include md {
+        width: 80%;
+    }
+    h1 {
+        max-width: 15ch;
+        font-size: 2rem;
+        font-weight: 300;
+        color: #070038;
+        @include lg {
+            font-size: 3.5rem;
+        }
+    }
+}
+.inner_item select {
+    width: 100%;
+    padding: 1rem;
+    background: #ecf1fd;
+    border: 2px solid #070038;
+    font-family: "THICCCBOI";
+    font-size: 1rem;
+    appearance: none;
+    background-image: url("../../images/KnowMore/down-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: calc(100% - 16px);
+}
+
+.knowmore_right_item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 8rem 1rem 3rem;
+    @include md {
+        padding: 0 0 7rem 5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #070038;
+        margin-bottom: 1rem;
+        @include lg {
+            font-size: 2rem;
+        }
+    }
+    p {
+        max-width: 60ch;
+        color: #070038;
+        font-weight: 500;
+        font-size: 1rem;
+        font-family: "THICCCBOI";
+        line-height: 150%;
+        letter-spacing: 0.016em;
+        @include lg {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.knowmore_container {
+    width: 100% #{!important};
+    @include md {
+        width: 90% #{!important};
+    }
+}
+.desktop_arrow {
+    position: absolute;
+    display: none;
+    @include md {
+        display: block;
+        width: 9rem;
+        left: 42%;
+        top: 50%;
+    }
+    @include lg {
+        width: 10rem;
+        top: 55%;
+    }
+}
+.mobile_arrow {
+    position: absolute;
+    top: 300px;
+    left: 35%;
+    @include md {
+        display: none;
+    }
+    img {
+        transform: rotate(105deg);
+    }
+}
+
+.footer {
+    text-align: center;
+    color: #070038;
+    padding: 40px 0;
+    font-size: 14px;
+    font-family: "THICCCBOI";
+}
