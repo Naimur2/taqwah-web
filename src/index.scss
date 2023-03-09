@@ -21,6 +21,7 @@
         font-family: "Mabry Pro", "THICCCBOI", "Russo One",
             sans-serif #{!important};
         background-color: $bg-color;
+        font-weight: 400;
     }
 
     .shadow-lg__left {
@@ -50,5 +51,9 @@
     .shadow-lg-item {
         border: 2px solid #000 #{!important};
         box-shadow: 0.3rem 0.3rem 0 0.1rem #000 #{!important};
+    }
+
+    .h1 {
+        @apply text-3xl xl:text-[3.15rem] font-medium font-mabry;
     }
 }
