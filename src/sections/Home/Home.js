@@ -5,6 +5,7 @@ import OurClient from "../OurClient/OurClient";
 import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
 import ContactUs from "../ContactUs/ContactUs";
+import Pricing from "../Pricing/Pricing";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Services />
             <OurClient />
             <KnowMore />
+            <Pricing />
             <ContactUs />
         </main>
     );

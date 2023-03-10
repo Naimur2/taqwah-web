@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactUs() {
     return (
-        <section>
+        <section className="py-14 xl:py-20">
             <div className="container mx-0 px-4 grid lg:grid-cols-2 gap-14 xl:gap-20">
                 <div className="flex flex-col gap-6 xl:gap-10">
                     <div className="flex flex-col xl:gap-6">

@@ -14,6 +14,9 @@ module.exports = {
       },
       boxShadow: {
         left:"0.3rem 0.3rem 0 0.1rem #000"
+      },
+      borderWidth: {
+        1: "1px",
       }
     },
   },

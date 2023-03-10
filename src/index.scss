@@ -56,4 +56,29 @@
     .h1 {
         @apply text-3xl xl:text-[3.15rem] font-medium font-mabry;
     }
+
+    .btn-bark-blue {
+        @apply bg-[#070038] text-white font-mabry font-medium text-lg xl:text-2xl py-3 px-4 xl:py-4 xl:px-6;
+    }
+
+    .feature-card {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -0.1rem;
+            left: -0.1rem;
+            right: -0.1rem;
+            bottom: -0.1rem;
+            transition: all 0.2s ease-in-out #{!important};
+            background-color: #000;
+            transform: rotate(-4deg);
+            z-index: -1;
+        }
+        &:is(:hover, :focus) {
+            &::before {
+                transform: rotate(-6deg);
+            }
+        }
+    }
 }
