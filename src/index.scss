@@ -3,6 +3,49 @@
 @tailwind components;
 @tailwind utilities;
 
+.services-btn {
+    position: relative;
+    background: transparent;
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    cursor: pointer;
+
+    &::after {
+        background: black;
+        content: "";
+        position: absolute;
+        left: 2px;
+        right: 2px;
+        top: 2px;
+        bottom: 2px;
+        inset: 2px;
+        z-index: -10;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        right: 2px;
+        top: 2px;
+        bottom: 2px;
+        inset: 2px;
+        z-index: -8;
+        transition: all 0.5s ease-in-out;
+        background: white;
+    }
+
+    &:hover {
+        &::after {
+            transform: rotate(-2deg);
+        }
+        &::before {
+            transform: rotate(2deg);
+        }
+    }
+}
+
 @layer base {
     *,
     *::before,
@@ -23,7 +66,6 @@
         background-color: $bg-color;
         font-weight: 400;
     }
-
     .shadow-lg__left {
         border: 2px solid #000 #{!important};
         transition: all 0.2s ease-in-out #{!important};
@@ -35,7 +77,6 @@
             box-shadow: none;
         }
     }
-
     .shadow-lg__right {
         border: 2px solid #000 #{!important};
         transition: all 0.2s ease-in-out #{!important};
@@ -51,14 +92,6 @@
     .shadow-lg-item {
         border: 2px solid #000 #{!important};
         box-shadow: 0.3rem 0.3rem 0 0.1rem #000 #{!important};
-    }
-
-    .h1 {
-        @apply text-3xl xl:text-[3.15rem] font-medium font-mabry;
-    }
-
-    .btn-bark-blue {
-        @apply bg-[#070038] text-white font-mabry font-medium text-lg xl:text-2xl py-3 px-4 xl:py-4 xl:px-6;
     }
 
     .feature-card {
@@ -80,5 +113,30 @@
                 transform: rotate(-6deg);
             }
         }
+    }
+
+    html,
+    body {
+        @apply h-full w-full;
+    }
+
+    .h1 {
+        @apply text-3xl xl:text-[3.15rem] font-medium font-mabry;
+    }
+
+    .btn-bark-blue {
+        @apply bg-[#070038] text-white font-mabry font-medium text-lg xl:text-2xl py-3 px-4 xl:py-4 xl:px-6;
+    }
+
+    .half-container {
+        @apply w-full md:max-w-[24rem] lg:max-w-[32rem] xl:max-w-[40rem] 2xl:max-w-[48rem]  py-4;
+    }
+
+    .half-container-right {
+        @apply px-4 md:pr-8 mx-auto md:mx-0 md:mr-auto;
+    }
+
+    .half-container-left {
+        @apply px-4 md:pl-8 mx-auto md:mx-0 md:ml-auto;
     }
 }

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function PriceCard({ title, price, category, features }) {
     return (
         <div
@@ -8,8 +6,10 @@ border-[#070038] border-2 border-solid bg-[#4878F4] hover:bg-white
 px-6 py-10  flex flex-col justify-between items-center gap-4 xl:gap-6 max-w-[21rem] xl:max-w-[30rem] w-full h-full feature-card
 "
         >
-            <div className="grid place-items-center gap-3 xl:gap-6">
-                <button className="btn-bark-blue min-w-[10rem]">{title}</button>
+            <div className="grid place-items-center gap-3 xl:gap-6 cursor-pointer">
+                <div className="btn-bark-blue min-w-[10rem] text-center">
+                    {title}
+                </div>
                 <h3 className="font-bold text-2xl xl:text-[2.25rem]">
                     {price}
                 </h3>

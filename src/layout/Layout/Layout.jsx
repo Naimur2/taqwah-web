@@ -4,14 +4,16 @@ import Footer from "../Footer/Footer";
 
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import Navbar from "../Navbar/TopNavbar";
+import useWindow from "../../hooks/useWindow";
 
 export default function Layout({ children }) {
+    const { isLessThan } = useWindow();
     return (
         <ScrollToTop>
             <Navbar />
             {children}
             <Footer />
-            <BottomTabs />
+            {isLessThan("xl") ? <BottomTabs /> : null}
         </ScrollToTop>
     );
 }

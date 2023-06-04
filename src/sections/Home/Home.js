@@ -6,16 +6,18 @@ import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
 import ContactUs from "../ContactUs/ContactUs";
 import Pricing from "../Pricing/Pricing";
+import Faq from "../Faq/Faq";
+import Process from './../Process/index';
 
 const Home = () => {
     return (
-        <main>
+        <main className="h-full w-full">
             <HeaderMain />
-            <Projects />
             <Services />
+            <Process />
             <OurClient />
-            <KnowMore />
             <Pricing />
+            <Faq />
             <ContactUs />
         </main>
     );

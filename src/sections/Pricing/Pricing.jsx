@@ -147,11 +147,14 @@ export default function Pricing() {
     const [currentPlan, setCurrentPlan] = React.useState(tabs[0].id);
     const currentTab = tabs.find((tab) => tab.id === currentPlan);
     return (
-        <section className="py-14 xl:py-20">
+        <section className="pt-14 xl:pt-20 !pb-0" id="pricing">
             <div className="pb-[16rem]">
                 <div className="container mx-auto px-4">
                     <div className="grid place-items-center gap-10 lg:gap-14">
-                        <h1 className="h1 text-center max-w-[24ch] leading-10 xl:leading-[4rem] mx-auto">
+                        <h1
+                            className="h1 text-center max-w-[24ch] leading-10 xl:leading-[4rem] mx-auto"
+                            data-aos="fade-up"
+                        >
                             We’ve got a pricing plan that’s perfect for you
                         </h1>
                         <PlanTab
@@ -164,7 +167,10 @@ export default function Pricing() {
             </div>
             <div className="bg-white">
                 <div className="container mx-auto px-4 translate-y-[-10rem]">
-                    <div className="grid gap-10 xl:gap-16 lg:grid-cols-3 place-items-center">
+                    <div
+                        className="grid gap-10 xl:gap-16 lg:grid-cols-3 place-items-center"
+                        data-aos="fade-up"
+                    >
                         {currentTab.plans.map((tab) => {
                             return (
                                 <PriceCard

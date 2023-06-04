@@ -64,7 +64,7 @@
     }
     h1 {
         margin: 0;
-        text-transform: uppercase;
+
         font-size: 2rem;
         font-weight: 500;
         color: #070038;
@@ -99,24 +99,12 @@
 }
 
 .services_btn {
-    width: 250px;
-    text-align: center;
-    margin: auto;
-    background-color: black;
-    transform: rotate(-2deg);
-    cursor: pointer;
-    @include md {
-        width: 200px;
-        margin: 0 auto;
-    }
 }
 
 .services_btn p {
-    background-color: #ffffff;
     font-size: 1rem;
     font-weight: 700;
     padding: 0 15px;
-    transform: rotate(2deg);
     line-height: 50px;
     margin: 0;
 }

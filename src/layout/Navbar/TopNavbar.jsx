@@ -8,15 +8,39 @@ import NavToggler from "./NavToggler";
 const links = [
     {
         id: 1,
-        href: "#service",
+        href: "#services",
         svgClassName: "homeSvg",
         label: "Services",
     },
     {
         id: 2,
-        href: "#projects",
+        href: "#process",
         svgClassName: "svg_size1",
-        label: "Projects",
+        label: "Process",
+    },
+    {
+        id: 3,
+        href: "#clients-love",
+        svgClassName: "svg_size1",
+        label: "Client's Love",
+    },
+    {
+        id: 4,
+        href: "#pricing",
+        svgClassName: "svg_size1",
+        label: "Pricing",
+    },
+    {
+        id: 5,
+        href: "#faq",
+        svgClassName: "svg_size1",
+        label: "FAQ",
+    },
+    {
+        id: 6,
+        href: "#contact-us",
+        svgClassName: "svg_size1",
+        label: "Contact Us",
     },
 ];
 
@@ -130,22 +154,23 @@ const links = [
 const TopNavbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     return (
-        <header className={classes["home_nav"]}>
+        <header
+            className={`${classes["home_nav"]} fixed top-0 left-0 right-0 z-[100]`}
+        >
             <NavBrand />
             <NavToggler onClick={() => setToggleMenu((prev) => !prev)} />
             <nav id={toggleMenu ? classes["hidden"] : ""}>
-                <ul>
+                <ul className="flex items-center justify-between ">
                     {links.map((link) => (
                         <NavItem
                             key={link.id}
-                            href="/"
+                            href={link.href}
                             svgClassName={classes[link.svgClassName]}
                         >
                             {link.label}
                         </NavItem>
                     ))}
                 </ul>
-                <button className="shadow-lg__left">Contact Us</button>
             </nav>
         </header>
     );

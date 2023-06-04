@@ -21,8 +21,15 @@ export default function HeaderRight() {
                     </div>
                     <div className="grid gap-4">
                         <div className="flex justify-end items-center gap-2">
-                            <img className="arrow" src={arrow_1} alt="" />
-                            <h4 className="-mt-4">Website UI</h4>
+                            <img
+                                className="arrow"
+                                src={arrow_1}
+                                alt=""
+                                data-aos="fade-up"
+                            />
+                            <h4 className="-mt-4" data-aos="fade-up">
+                                Website UI
+                            </h4>
                         </div>
 
                         <SocialCardLink
@@ -51,14 +58,24 @@ export default function HeaderRight() {
                             className="h-social-block !min-h-[7rem] !min-w-[10rem] sm:!min-h-[10rem] sm:!min-w-[14rem] xl:!min-h-[14rem] xl:!min-w-[18rem]"
                         />
                         <div>
-                            <h4>Dashboard UI</h4>
-                            <img className="arrow" src={arrow_2} alt="" />
+                            <h4 data-aos="fade-up">Dashboard UI</h4>
+                            <img
+                                className="arrow"
+                                src={arrow_2}
+                                alt=""
+                                data-aos="fade-up"
+                            />
                         </div>
                     </div>
                     <div className="item_5">
                         <div>
-                            <img className="arrow" src={arrow_1} alt="" />
-                            <h4>APP UI</h4>
+                            <img
+                                className="arrow"
+                                src={arrow_1}
+                                alt=""
+                                data-aos="fade-up"
+                            />
+                            <h4 data-aos="fade-up">APP UI</h4>
                         </div>
                         <SocialCardLink
                             link="https://ui8.net/taqwah/products/nft-market-uiux?status=6"

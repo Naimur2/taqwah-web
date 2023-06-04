@@ -1,15 +1,11 @@
 @use "../../styles/" as *;
 
 .home_nav {
-    position: fixed;
-    top: 0;
     display: flex;
-    width: 100%;
     background-color: #4e7cf4;
     border-top: 2px solid #070038;
     border-bottom: 2px solid #070038;
     flex-direction: column;
-    z-index: 1000;
     @include md {
         align-items: center;
         flex-direction: row;

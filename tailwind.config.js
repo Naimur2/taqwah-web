@@ -4,6 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html"
   ],
   theme: {
     extend: {
@@ -17,6 +18,12 @@ module.exports = {
       },
       borderWidth: {
         1: "1px",
+      },
+      backgroundImage: {
+        "arrowProcess":"url('/src/images/arrow-process.svg')",
+      },
+      content:{
+        "empty": "''",
       }
     },
   },
