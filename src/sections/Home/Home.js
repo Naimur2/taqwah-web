@@ -14,10 +14,10 @@ const Home = () => {
         <main className="h-full w-full">
             <HeaderMain />
             <Services />
-            <Process />
+            {/* <Process /> */}
             <OurClient />
-            <Pricing />
-            <Faq />
+            {/* <Pricing /> */}
+            {/* <Faq /> */}
             <ContactUs />
         </main>
     );

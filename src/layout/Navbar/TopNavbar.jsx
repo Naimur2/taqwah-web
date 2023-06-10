@@ -12,30 +12,30 @@ const links = [
         svgClassName: "homeSvg",
         label: "Services",
     },
-    {
-        id: 2,
-        href: "#process",
-        svgClassName: "svg_size1",
-        label: "Process",
-    },
+    // {
+    //     id: 2,
+    //     href: "#process",
+    //     svgClassName: "svg_size1",
+    //     label: "Process",
+    // },
     {
         id: 3,
         href: "#clients-love",
         svgClassName: "svg_size1",
         label: "Client's Love",
     },
-    {
-        id: 4,
-        href: "#pricing",
-        svgClassName: "svg_size1",
-        label: "Pricing",
-    },
-    {
-        id: 5,
-        href: "#faq",
-        svgClassName: "svg_size1",
-        label: "FAQ",
-    },
+    // {
+    //     id: 4,
+    //     href: "#pricing",
+    //     svgClassName: "svg_size1",
+    //     label: "Pricing",
+    // },
+    // {
+    //     id: 5,
+    //     href: "#faq",
+    //     svgClassName: "svg_size1",
+    //     label: "FAQ",
+    // },
     {
         id: 6,
         href: "#contact-us",

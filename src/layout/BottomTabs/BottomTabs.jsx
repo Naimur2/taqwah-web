@@ -16,23 +16,29 @@ const tabs = [
         link: "#clients-love",
     },
     {
-        id: 3,
-        name: "Pricing",
-        icon: "/svgs/pricing.svg",
-        link: "#pricing",
-    },
-    {
-        id: 4,
-        name: "Process",
-        icon: "/svgs/process.svg",
-        link: "#process",
-    },
-    {
         id: 5,
-        name: "Faq",
-        icon: "/svgs/services.svg",
-        link: "#faq",
+        name: "Contact Us",
+        icon: "/svgs/clients-love.svg",
+        link: "#contact-us",
     },
+    // {
+    //     id: 3,
+    //     name: "Pricing",
+    //     icon: "/svgs/pricing.svg",
+    //     link: "#pricing",
+    // },
+    // {
+    //     id: 4,
+    //     name: "Process",
+    //     icon: "/svgs/process.svg",
+    //     link: "#process",
+    // },
+    // {
+    //     id: 5,
+    //     name: "Faq",
+    //     icon: "/svgs/services.svg",
+    //     link: "#faq",
+    // },
 ];
 
 const Tab = ({ isActive, name, href }) => {
@@ -71,7 +77,7 @@ export default function BottomTabs() {
     return (
         <div
             className={
-                "bg-white fixed bottom-0 left-0 right-0 grid grid-cols-5 gap-2 py-3 px-2 shadow-lg z-50"
+                "bg-white fixed bottom-0 left-0 right-0 grid grid-cols-3 gap-2 py-3 px-2 shadow-lg z-50 min-h-[4rem]"
             }
         >
             {tabs.map((tab) => (
